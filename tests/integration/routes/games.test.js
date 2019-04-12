@@ -44,6 +44,18 @@ describe('/api/games', () => {
       expect(res.status).toBe(422);
     });
 
+    it('should return 405 if game title is not unique', async () => {
+      const dupedGame = {
+        title: 'Super Smash Bros. Brawl',
+        genre: 'Video Game',
+        releaseYear: 2008
+      }
+
+      const res = await request(server).post('/api/games').send(dupedGame);
+
+      expect(res.status).toBe(405);
+    });
+
     it('should add the game if it is successfully validated', async () => {
       const superCoolGame = {
         title: 'Dragon Quest Monsters: Joker',
