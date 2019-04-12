@@ -4,14 +4,15 @@ const router = require('express').Router();
 
 // C
 router.post('/', validate(Games.schema), async ({ body: newGame }, res) => {
-  const [game] = await Games.findBy({ title: newGame.title });
+  let [game] = await Games.findBy({ title: newGame.title });
 
   if (game) return res.status(405).json({
     message: 'The game "title" must be unique.'
   });
 
   const [id] = await Games.add(newGame);
-  const [game] = await Games.findById(id);
+        [game] = await Games.findById(id);
+
   res.status(201).json(game);
 });
 
