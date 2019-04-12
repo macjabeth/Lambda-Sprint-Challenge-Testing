@@ -1,0 +1,7 @@
+{
+  "knex": {
+    "client": "sqlite3",
+    "useNullAsDefault": true,
+    "connection": { "filename": "./data/games.db3" }
+  }
+}
