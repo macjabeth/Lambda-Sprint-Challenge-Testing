@@ -24,16 +24,42 @@ In this challenge use `Test Driven Development` to build a RESTful API using Nod
 
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-1. In Jest, what are the differences between `describe()` and `it()` globals, and what are good uses for them?
-1. What is the point of `Test Driven Development`? What do you think about this approach?
-1. Mention three types of automated tests.
+**1. In Jest, what are the differences between `describe()` and `it()` globals, and what are good uses for them?**
+
+`describe()` creates a block that groups together several related tests in one "test suite".
+
+`it()` creates individual tests which you can (and should) nest inside different describe blocks.
+
+They're useful for creating test that check the logic & functionality of your code.
+
+**2. What is the point of `Test Driven Development`? What do you think about this approach?**
+
+`Test Driven Development` is useful because it makes you think about how you'll write your code before you write it. It ensures you have testable source code from the very start of your application and warns you if you have any errors in your code.
+
+**3. Mention three types of automated tests.**
+
+* Unit
+  * Tests a unit of an application without its external dependencies.
+  * Cheap to write.
+  * Executes fast.
+  * Doesn't give a lot of confidence.
+  * Great for testing logic & loops.
+* Integration
+  * Tests the application with its external dependencies.
+  * Take longer to execute.
+  * Gives more confidence.
+* End-to-end (e2e)
+  * Drives an application through its UI.
+  * Gives you the greatest confidence.
+  * Very slow.
+  * Very brittle.
 
 ## Project Set Up
 
-- [ ] fork and clone this repository.
-- [ ] **CD into the folder** where you downloaded the repository.
-- [ ] run `yarn` or `npm i` to download all dependencies.
-- [ ] type `yarn test` or `npm test` to run the tests. The `test` script is already configured.
+- [x] fork and clone this repository.
+- [x] **CD into the folder** where you downloaded the repository.
+- [x] run `yarn` or `npm i` to download all dependencies.
+- [x] type `yarn test` or `npm test` to run the tests. The `test` script is already configured.
 
 ## Minimum Viable Product
 
